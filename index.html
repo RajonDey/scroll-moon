@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
+    <meta name="description" content="Content will write">
+
+    <title>Parallax scrolling website | vanilla javascript</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!-- <header><a href="#">Logo</a></header> -->
+	<section>
+		<div id="text">
+			<a href="#content"><h2>MOON</h2></a>
+		</div>
+		<img src="images/stars.png" alt="stars" id="stars">
+		<img src="images/moon.png" alt="moon" id="moon">
+		<img src="images/tree.png" alt="tree" id="tree">
+		<img src="images/mount-1.png" alt="mount" id="mount-1">
+		<img src="images/mount-2.png" alt="mount" id="mount-2">
+		<img src="images/gruss.png" alt="gruss" id="gruss">
+		<img src="images/mount-3.png" alt="mount" id="mount-3">
+	</section>
+	<div class="content" id="content">
+		<p>“Everybody has a little bit of the sun and moon in them. Everybody has a little bit of man, woman, and animal in them. Darks and lights in them. Everyone is part of a connected cosmic system. Part earth and sea, wind and fire, with some salt and dust swimming in them. We have a universe within ourselves that mimics the universe outside. None of us are just black or white, or never wrong and always right. No one. No one exists without polarities. Everybody has good and bad forces working with them, against them, and within them.</p>
+	</div>
+
+	<script type="text/javascript">
+		let texts = document.getElementById('text');
+		let stars = document.getElementById('stars');
+		let moon = document.getElementById('moon');
+		let tree = document.getElementById('tree');
+
+		let moon2 = document.getElementById('moon32');
+
+		window.addEventListener('scroll', function() {
+			let value = window.scrollY;
+
+			texts.style.top = 50 + value * -0.2 + 'px';
+			stars.style.top = value * -1.5 + 'px';
+			moon.style.top = value * 1.1 + 'px';
+			tree.style.left = value * -1.0 + 'px';
+		})
+	</script>
+</body>
+</html>
